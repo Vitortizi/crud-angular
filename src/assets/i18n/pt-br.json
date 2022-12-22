@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "home": "Home",
+    "register": "Cadastrar"
+  },
+  "footer": {
+    "created_by": "Criado por Vitor Quintas Tomazini"
+  },
+  "pages_title": {
+    "register": "Cadastre um novo cliente",
+    "list": "Lista de usuários"
+  },
+  "fields": {
+    "name": "Nome",
+    "birth_date": "Data de nascimento",
+    "telephone": "Telefone",
+    "address": "Endereço",
+    "modelVehicle": "Modelo do Veículo",
+    "brandVehicle": "Marca do Veículo",
+    "button_submit": "Cadastrar",
+    "button_update": "Atualizar",
+    "label_edit": "Editar / Excluir"
+  },
+  "toastr": {
+    "mandatory_fields_toastr": "Preencha os campos obrigatórios.",
+    "created_toastr": "Criado com sucesso.",
+    "update_toastr": "Atualizado com sucesso."
+  },
+  "errors": {
+    "mandatory_field": "Este campo é obrigatório!",
+    "incorrect_value": "Valor informado está incorreto.",
+    "amount_of_characters": "Quantidade caracteres informado está incorreto.",
+    "message_is_empty": "Não existe usuário cadastrado..."
+  }
+}

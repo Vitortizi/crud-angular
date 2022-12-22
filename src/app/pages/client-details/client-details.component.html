@@ -1,0 +1,105 @@
+<div class="container">
+    <div class="middle-temp">
+        <h1>{{ 'pages_title.register' | translate }}</h1>
+
+        <form [formGroup]="userForm" (ngSubmit)="!hasData ? addUser() : putUser()" novalidate>
+            <div class="row">
+                <div class="col-md-4 mt-3 ">
+                    <label for="" class="float-left" translate>fields.name</label>
+                    <input type="text" class="form-control" formControlName="name">
+                </div>
+
+                <div class="col-md-4 mt-3">
+                    <label for="" class="float-left">CPF <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" mask="000.000.000-00" formControlName="cpf" required>
+
+                    <div
+                        *ngIf="validForm.controls['cpf'].invalid && (validForm.controls['cpf'].dirty || validForm.controls['cpf'].touched)">
+                        <span class="error" *ngIf="validForm.get('cpf')?.errors?.['required']">
+                            <p class="text-danger">
+                                {{ 'errors.mandatory_field' | translate }}
+                            </p>
+                        </span>
+                        <span class="error"
+                            *ngIf="validForm.get('cpf')?.errors?.['equalDigits'] || validForm.get('cpf')?.errors?.['digit']">
+                            <p class="text-danger">
+                                {{ 'errors.incorrect_value' | translate }}
+                            </p>
+                        </span>
+                    </div>
+
+                    <span class="error" *ngIf="validForm.get('cpf')?.errors?.['minlength']">
+                        <p class="text-danger">
+                            {{ 'errors.amount_of_characters' | translate }}
+                        </p>
+                    </span>
+                </div>
+
+                <div class="col-md-4 mt-3">
+                    <label for="" class="float-left" translate> fields.birth_date <span
+                            class="text-danger">*</span></label>
+                    <input type="date" class="form-control" formControlName="birth_date" required>
+
+                    <div *ngIf="validForm.get('birth_date')?.errors && validForm.get('birth_date')?.touched">
+                        <span class="error" *ngIf="validForm.get('birth_date')?.errors?.['required']">
+                            <p class="text-danger">
+                                {{ 'errors.mandatory_field' | translate }}
+                            </p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mt-3">
+                    <label for="" class="float-left" translate>fields.telephone <span
+                            class="text-danger">*</span></label>
+                    <input type="text" class="form-control" mask="(00) 00000-0000" formControlName="telephone" required>
+
+                    <div *ngIf="validForm.get('telephone')?.errors && validForm.get('telephone')?.touched">
+                        <span class="error" *ngIf="validForm.get('telephone')?.errors?.['required']">
+                            <p class="text-danger">
+                                {{ 'errors.mandatory_field' | translate }}
+                            </p>
+                        </span>
+                    </div>
+
+                    <span class="error" *ngIf="validForm.get('telephone')?.errors?.['minlength']">
+                        <p class="text-danger">
+                            {{ 'errors.amount_of_characters' | translate }}
+                        </p>
+                    </span>
+                </div>
+
+                <div class="col-md-9 mt-3">
+                    <label for="" class="float-left" translate> fields.address </label>
+                    <input type="text" class="form-control" formControlName="address">
+                </div>
+
+                <div class="col-md-6 mt-3">
+                    <label for="" class="float-left" translate> fields.brandVehicle </label>
+                    <select class="form-control" name="" id="" formControlName="brandVehicle"
+                        (click)="getCarModel(userForm.get('brandVehicle')?.value)">
+                        <option *ngFor="let car of carsBrand" [value]="car.codigo">
+                            {{car.nome}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="col-md-6 mt-3">
+                    <label for="" class="float-left" translate> fields.modelVehicle </label>
+                    <select class="form-control" name="" id="" formControlName="modelVehicle">
+                        <option *ngFor="let car of carsModel" [value]="car.codigo">
+                            {{car.nome}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="col-md-12 mt-5 d-flex-end">
+                    <button type="submit" class="btn btn-outline-dark btn-lg" *ngIf="!hasData"
+                        translate>fields.button_submit</button>
+                    <button type="submit" class="btn btn-outline-dark btn-lg" *ngIf="hasData"
+                        translate>fields.button_update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

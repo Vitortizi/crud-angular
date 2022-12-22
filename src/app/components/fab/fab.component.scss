@@ -1,0 +1,129 @@
+.fab {
+  position: fixed;
+  width: 80px;
+  height: 200px;
+  top: 80px;
+  right: 10px;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top:80px;   //fixa o botão à 40px do fim da página
+  right: 10px; //fixa o botão a 10px da borda direita da página
+  background-color: #212529;
+  color: #FFF;
+  border: 1px dotted rgba(130, 130, 130, 0.3);
+  border-radius: 50px;
+  text-align: center;
+  z-index: 1000; //posiciona o botão acima dos demais componentes da página
+  animation: bot-to-top 2s ease-out; //animação executada quando a página é carregada
+}
+
+.fab-btn {
+  clear: both;
+}
+
+.label-container {
+  position: relative;
+  bottom: 0px;
+  right: 110px;
+  display: table;
+  visibility: hidden;
+  float: right;
+}
+
+.label-text {
+  color: #FFF;
+  background: rgba(51, 51, 51, 0.5);
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.fab-tooltip {
+  //posicionamento do tooltip que aparece ao passar o mouse sobre o botão
+  position: relative;
+  bottom: 30px;
+  right: 70px;
+  display: table;
+  visibility: hidden;
+  float: right;
+}
+
+ul {
+  position: fixed;
+  right: 10px;
+  padding-bottom: 20px;
+  top: 160px;
+  z-index: 100;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+ul li button {
+  background-color: #212529;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid rgba(130, 130, 130, 0.3);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-icon {
+  font-size: 24px;
+}
+
+button#menu-share+ul {
+  //esconde a lista de opções
+  visibility: hidden;
+}
+
+button#menu-share:hover+ul {
+  //mostra a lista de opções
+  visibility: visible;
+  animation: scale-in 0.5s;
+}
+
+
+ul:hover {
+  //mantem os botões de opções visíveis
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.fab:hover ul {
+  //mantem os botões de opções visíveis
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+button#menu-share i {
+  animation: rotate-in 0.5s;
+}
+
+button#menu-share:hover>i {
+  animation: rotate-out 0.5s;
+}
+
+button.fab-btn>div.label-container {
+  //esconde o tooltip
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+button.fab-btn:hover>div.label-container {
+  // mostra o tooltip
+  visibility: visible;
+  opacity: 1;
+}

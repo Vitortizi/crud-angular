@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="middle-temp">
+        <h1>{{'pages_title.list' | translate}}</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" translate>fields.name</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col" translate>fields.birth_date</th>
+                    <th scope="col" translate>fields.telephone</th>
+                    <th scope="col" translate>fields.address</th>
+                    <th scope="col" translate>fields.modelVehicle</th>
+                    <th scope="col" translate>fields.brandVehicle</th>
+                    <th scope="col" translate>fields.label_edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of users">
+                    <td>{{item.name}}</td>
+                    <td>{{utils.formatCpf(item.cpf)}}</td>
+                    <td>{{utils.formatDate(item.birth_date)}}</td>
+                    <td>{{utils.formatTelephone(item.telephone)}}</td>
+                    <td>{{item.address}}</td>
+                    <td>{{item.vehicle.brandVehicle?.nome}}</td>
+                    <td>{{item.vehicle.modelVehicle?.nome}}</td>
+                    <td>
+                        <button class="btn btn-outline-secondary update" (click)="update(item)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-outline-secondary remove" (click)="remove(item.userId)"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div *ngIf="thereIsaCar" class="text-center">
+            <h5>{{'errors.message_is_empty' | translate}}</h5>
+        </div>
+    </div>
+</div>

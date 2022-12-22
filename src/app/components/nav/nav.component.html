@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand mr-5" (click)="redirectPage('home')">QUEST - Angular</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" (click)="redirectPage('home')">{{'navbar.home' | translate}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="redirectPage('register')">{{'navbar.register' | translate}}</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<app-fab></app-fab>

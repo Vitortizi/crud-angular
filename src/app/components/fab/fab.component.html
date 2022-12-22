@@ -1,0 +1,31 @@
+<div class="fab">
+  <button class="float fab-btn" id="menu-share">
+    <ng-template [ngIf]="!enIsNavActive" [ngIfElse]="noMail">
+      <img src="assets/images/brasil.png" class="img-fluid" alt="" srcset="">
+    </ng-template>
+
+    <ng-template #noMail>
+      <img src="assets/images/united-states.png" class="img-fluid" alt="" srcset="">
+    </ng-template>
+  </button>
+
+  <ul>
+    <li>
+      <button class="fab-btn fab-btn-item" (click)="useLanguage('pt-br')">
+        <img src="assets/images/brasil.png" class="img-fluid" alt="" srcset="">
+        <div class="label-container">
+          <div class="label-text">Brasil</div>
+        </div>
+      </button>
+    </li>
+
+    <li>
+      <button class="fab-btn" (click)="useLanguage('en')">
+        <img src="assets/images/united-states.png" class="img-fluid" alt="" srcset="">
+        <div class="label-container">
+          <div class="label-text">USA</div>
+        </div>
+      </button>
+    </li>
+  </ul>
+</div>

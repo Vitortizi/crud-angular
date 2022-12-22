@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "home": "Home",
+    "register": "Register"
+  },
+  "footer": {
+    "created_by": "Created by Vitor Quintas Tomazini"
+  },
+  "pages_title": {
+    "register": "Register a new customer",
+    "list": "User List"
+  },
+  "fields": {
+    "name": "Name",
+    "birth_date": "Birth date",
+    "telephone": "Telephone",
+    "address": "Address",
+    "modelVehicle": "Vehicle Model",
+    "brandVehicle": "Vehicle Brand",
+    "button_submit": "Register",
+    "button_update": "Update",
+    "label_edit": "Edit / Delete"
+  },
+  "toastr": {
+    "mandatory_fields_toastr": "Fill in the required fields.",
+    "created_toastr": "Created successfully.",
+    "update_toastr": "Updated successfully."
+  },
+  "errors": {
+    "mandatory_field": "This field is required!",
+    "incorrect_value": "Value entered is incorrect.",
+    "amount_of_characters": "Number of characters entered is incorrect.",
+    "message_is_empty": "There is no registered user..."
+  }
+}

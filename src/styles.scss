@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~font-awesome/css/font-awesome.css";
+
+// regular style toast
+@import '~ngx-toastr/toastr';
+
+body {
+    padding-top: 5rem;
+}
+
+.middle-temp {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.d-flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
