@@ -7,6 +7,7 @@
 - Atualizar usuário
 - Excluir usuário
 - Alterar idioma
+- Foi utilizado o localstorage para armazenamento dos usuários
 
 ## Ferramentas usadas:
 - Scully - Para gerar o projetos estático.
