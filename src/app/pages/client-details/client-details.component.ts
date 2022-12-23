@@ -121,6 +121,8 @@ export class ClientDetailsComponent implements OnInit {
       this.translate.get('toastr.update_toastr').subscribe(res => {
         this.toastr.success(res);
       });
+
+      this.router.navigate(['/home']);
     });
   }
 

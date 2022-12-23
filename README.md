@@ -10,18 +10,19 @@
 - Foi utilizado o localstorage para armazenamento dos usuários
 
 ## Ferramentas usadas:
-- Scully - Para gerar o projetos estático.
+- Scully - Para gerar o projeto estático
 - Karma (Jasmine) - Para testes unitários.
-- bootstrap - Obtenha de forma rápida e fácil layouts personalizados a partir de classes.
+- Bootstrap -  Framework web para desenvolvimento de componentes de interface e front-end.
 - font-awesome - Para obter icones.
 - moment - Para formatar data.
-- ngx-mask - Criar máscara de campos.
-- ngx-toastr - Mostrar alertas personalizados.
-- uuid - Gerar identificador único para cada usuário.
-- i18n - Criar traduções de forma dinâmica.
+- ngx-mask - Adição de máscara em campos.
+- ngx-toastr - Emissão de alertas personalizados.
+- uuid - Cria identificador único para cada usuário.
+- i18n - Framework de internacionalização (traduções de forma dinâmica)
 
 
 # Como rodar o projeto:
+Execute `npm install` para baixar o node_modules.
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
 
